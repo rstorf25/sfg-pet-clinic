@@ -1,4 +1,4 @@
-package com.sfgpetclinic.sfgpetclinic.model;
+package sfgpetclinic.model;
 
 public class PetType {
     private String name;
