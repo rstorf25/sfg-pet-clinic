@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.sfgpetclinic</groupId>
 	<artifactId>sfg-pet-clinic</artifactId>
@@ -21,9 +21,6 @@
     <properties>
 		<java.version>17</java.version>
 	</properties>
-	<dependencies>
-
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -39,7 +36,18 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<developerConnection>scm:git:git@github.com:rstorf25/sfg-pet-clinic.git</developerConnection>
+	</scm>
 
 </project>
